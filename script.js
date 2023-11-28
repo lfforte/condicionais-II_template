@@ -37,9 +37,7 @@ verificaDependente(15); */
 verificaDependente(16); */
 
 //###-------------- Prática 3
-
-const escolhaCartao = (ramal) => {
-
+/* const escolhaCartao = (ramal) => {
   switch (ramal) {
     case 1:
       console.log(`Cartão Fácil`);
@@ -56,8 +54,26 @@ const escolhaCartao = (ramal) => {
     default:
       console.log(`Escolha uma das quatro opções!`);
   }
+}
+escolhaCartao(2); */
 
+//###-------------- Prática extra
 
+const verificaDivisao = (numero) => {
+
+  if (numero % 2 === 0) {
+    if (numero % 3 === 0) {
+      console.log(`Número divisível por 2 e 3.`);
+    }
+  } else {
+    console.log(`Número não é divisível por 2 e 3`);
+  }
+
+  if ((numero % 2 === 0) && (numero % 3 === 0)) {
+    console.log(`Número divisível por 2 e 3.`);
+  } else {
+    console.log(`Número não é divisível por 2 e 3`);
+  }
 }
 
-escolhaCartao(2);
+verificaDivisao(prompt(`Digite o valor para verificaçao: `));
