@@ -61,19 +61,36 @@ escolhaCartao(2); */
 
 const verificaDivisao = (numero) => {
 
-  if (numero % 2 === 0) {
-    if (numero % 3 === 0) {
-      console.log(`Número divisível por 2 e 3.`);
-    }
-  } else {
-    console.log(`Número não é divisível por 2 e 3`);
-  }
+  /*   if (numero % 2 === 0) {
+      if (numero % 3 === 0) {
+        console.log(`Número divisível por 2 e 3.`);
+      }
+    } else {
+      console.log(`Número não é divisível por 2 e 3`);
+    } */
 
   if ((numero % 2 === 0) && (numero % 3 === 0)) {
+    //numero === 30 ? console.log(`UFA ACERTEI!`) : console.log(`Não foi dessa vez :(`)
+    switch (numero) {
+      case 6:
+        console.log(`Número 6`);
+        break;
+      case 12:
+        console.log(`Número 12`);
+        break;
+      case 18:
+        console.log(`Número 18`);
+        break;
+      case 30:
+        console.log(`Número 30`);
+        break;
+      default:
+        console.log(`Número diferente`);
+    }
     console.log(`Número divisível por 2 e 3.`);
   } else {
     console.log(`Número não é divisível por 2 e 3`);
   }
 }
 
-verificaDivisao(prompt(`Digite o valor para verificaçao: `));
+verificaDivisao(Number(prompt(`Digite o valor para verificaçao: `)));
